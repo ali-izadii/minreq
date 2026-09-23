@@ -27,7 +27,7 @@ fn main() -> Result<(), minreq::Error> {
 // Helper functions
 
 fn flush() {
-    use std::io::{stdout, Write};
+    use std::io::{Write, stdout};
     stdout().lock().flush().ok();
 }
 

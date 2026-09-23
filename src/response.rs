@@ -1,4 +1,4 @@
-use crate::{connection::HttpStream, Error};
+use crate::{Error, connection::HttpStream};
 use std::io::{self, BufReader, Read};
 use std::str;
 
@@ -426,7 +426,7 @@ fn read_chunked(
 
     // Save some typing:
     fn bail<E: Into<Box<dyn std::error::Error + Send + Sync>>>(e: E) -> io::Result<usize> {
-        Err(io::Error::new(io::ErrorKind::Other, e))
+        Err(io::Error::other(e))
     }
 
     // If we have no bytes left to read in the current chunk,

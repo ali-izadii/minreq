@@ -523,7 +523,7 @@ pub fn patch<T: Into<URL>>(url: T) -> Request {
 #[cfg(test)]
 mod parsing_tests {
 
-    use super::{get, ParsedRequest};
+    use super::{ParsedRequest, get};
 
     #[test]
     fn test_headers() {
@@ -566,7 +566,7 @@ mod parsing_tests {
 
 #[cfg(all(test, feature = "urlencoding"))]
 mod encoding_tests {
-    use super::{get, ParsedRequest};
+    use super::{ParsedRequest, get};
 
     #[test]
     fn test_with_param() {

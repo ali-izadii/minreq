@@ -357,7 +357,7 @@ where
     F: 'static + Send + FnOnce() -> Result<R, Error>,
     R: 'static + Send,
 {
-    use std::sync::mpsc::{channel, RecvTimeoutError};
+    use std::sync::mpsc::{RecvTimeoutError, channel};
 
     match timeout_at {
         Some(deadline) => {
