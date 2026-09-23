@@ -1,4 +1,4 @@
-use crate::{Error, connection::HttpStream};
+use crate::{connection::HttpStream, Error};
 use std::io::{self, BufReader, Read};
 use std::str;
 

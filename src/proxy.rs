@@ -1,7 +1,7 @@
-use crate::ParsedRequest;
 use crate::error::Error;
-use base64::engine::Engine;
+use crate::ParsedRequest;
 use base64::engine::general_purpose::STANDARD;
+use base64::engine::Engine;
 
 /// Kind of proxy connection (Basic, Digest, etc)
 #[derive(Clone, PartialEq, Eq, Debug)]
